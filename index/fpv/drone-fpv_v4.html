@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fabrication drone FPV - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #00109F; 
+            --accent-color: #2858DD;  
+            --secondary-color: #4C5F80; 
+            --bg-cream: #f8fafc;      
+            --soft-bg: #f0f4fa;
+            --text-dark: #00109F;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background-color: var(--bg-cream); font-family: 'Barlow', sans-serif; color: var(--text-dark); line-height: 1.8; }
+        h1, h2, h3 { font-family: 'Barlow', sans-serif; color: var(--text-dark); font-weight: 700; }
+        p { font-size: 18px; color: var(--secondary-color); }
+        
+        .navbar { background-color: var(--primary-color); padding: 20px 50px; position: sticky; top: 0; z-index: 100; }
+        .back-btn { color: white; text-decoration: none; font-weight: 600; font-size: 18px; transition: color 0.3s; }
+        .back-btn:hover { color: var(--soft-bg); }
+
+        .article-container { max-width: 900px; margin: 0 auto; padding: 60px 20px; }
+        .project-header { text-align: center; margin-bottom: 60px; }
+        .project-header h1 { font-size: 48px; margin-bottom: 15px; }
+        .project-header p { font-size: 22px; color: var(--accent-color); font-weight: 500; }
+
+        .content-section { background: white; padding: 40px; margin-bottom: 40px; border-left: 6px solid var(--primary-color); border-top: 1px solid var(--soft-bg); border-right: 1px solid var(--soft-bg); border-bottom: 1px solid var(--soft-bg); }
+        .content-section h2 { font-size: 32px; margin-bottom: 20px; border-bottom: 2px solid var(--soft-bg); padding-bottom: 10px; }
+
+        .project-img { width: 100%; height: auto; margin: 25px 0; background-color: var(--soft-bg); min-height: 300px; display: block; border: 1px solid var(--secondary-color); }
+
+        /* Nouvelle mise en forme pour le listing matériel */
+        .specs-container { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin: 40px 0; }
+        .spec-box { background-color: white; border: 1px solid var(--soft-bg); border-top: 4px solid var(--primary-color); padding: 30px; border-radius: 4px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
+        .spec-box h3 { font-size: 22px; margin-bottom: 25px; color: var(--primary-color); display: flex; align-items: center; gap: 12px; }
+        .spec-list { list-style: none; }
+        .spec-list li { margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px solid var(--soft-bg); font-size: 16px; color: var(--secondary-color); }
+        .spec-list li:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+        .spec-list strong { color: var(--text-dark); display: block; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+        
+        @media (max-width: 768px) {
+            .specs-container { grid-template-columns: 1fr; }
+        }
+
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.6s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        
+        @media (max-width: 768px) {
+            .navbar { padding: 15px 20px; text-align: center; }
+            .article-container { padding: 40px 15px; }
+            
+            
+            .project-header h1 { font-size: 32px; }
+            .project-header p { font-size: 18px; }
+            .content-section h2 { font-size: 26px; }
+            
+            
+            .content-section { padding: 25px 15px; }
+            .project-img, .pdf-container { width: 100%; min-height: auto; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="../index.html" class="back-btn">← Retour au portfolio</a>
+    </nav>
+
+    <main class="article-container">
+        
+        <header class="project-header reveal">
+            <h1>Fabrication drone FPV</h1>
+            <p>Conception, assemblage matériel et configuration logicielle de A à Z.</p>
+        </header>
+
+        <section class="content-section reveal">
+            <h2>Introduction</h2>
+            <p>Le drone FPV (First Person View) est un aéronef piloté en immersion totale grâce à une caméra embarquée qui transmet le flux vidéo en temps réel vers le masque du pilote. Attiré depuis longtemps par le monde de l'aéromodélisme au travers de nombreuses vidéos, j'ai décidé de franchir le pas : concevoir, assembler et piloter ma propre machine.</p>
+            <img src="star wars drones GIF by Digg.gif" alt="Illustration FPV" class="project-img">
+            <img src="Drones Fpv Drone GIF by Drone Racing League.gif" alt="Illustration FPV" class="project-img">
+        </section>
+
+        <section class="content-section reveal">
+            <h2>Objectif et cahier des charges</h2>
+            <p>L'objectif était de concevoir un drone polyvalent, à mi-chemin entre le freestyle et la course, en sélectionnant des composants fiables tout en maîtrisant le budget global. Cette phase a exigé un important travail de recherche pour comprendre l'architecture matérielle, identifier les marques reconnues du marché et s'assurer de la parfaite compatibilité des éléments entre eux.</p>
+            
+            <img src="Vue_eclate_fpv.jfif" alt="Choix des composants" class="project-img">
+            
+            <div class="specs-container">
+                <div class="spec-box">
+                    <h3><i class="fa-solid fa-rocket"></i> Setup embarqué (5 pouces)</h3>
+                    <ul class="spec-list">
+                        <li><strong>Châssis</strong> GEPRC Mark 4</li>
+                        <li><strong>Carte mère (FC & ESC)</strong> SpeedyBee F405 V3 + ESC 50A 4-en-1 </li>
+                        <li><strong>Motorisation</strong> YSIDO 2250KV</li>
+                        <li><strong>Transmission Vidéo</strong> Caméra Caddx Ratel 2 + VTX Rush Tank Ultimate (5.8 GHz, 800 mW)</li>
+                        <li><strong>Liaison Radio</strong> Récepteur ExpressLRS (2.4 GHz)</li>
+                        <li><strong>Alimentation</strong> Batterie LiPo 4S (14,8 V / pleine charge 16,8 V)</li>
+                    </ul>
+                </div>
+                
+                <div class="spec-box">
+                    <h3><i class="fa-solid fa-tower-broadcast"></i> Équipements au sol</h3>
+                    <ul class="spec-list">
+                        <li><strong>Radiocommande</strong> RadioMaster Pocket (EdgeTX, module ELRS intégré)</li>
+                        <li><strong>Masque FPV</strong> Eachine VR007 Pro</li>
+                        <li><strong>Alimentation</strong> Chargeur IMAX B6AC</li>
+                        <li><strong>Prototypage 3D</strong> Bambu Lab A1 (Impression de pièces en TPU 95A : support XT60, bumpers, antennes)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section reveal">
+            <h2>Assemblage matériel</h2>
+            <p>Dès la réception des composants, j'ai procédé au montage mécanique du châssis puis à l'intégration des moteurs. L'étape suivante, plus technique, a consisté à réaliser les soudures à l'étain sur l'ESC (Electronic Speed Controller) et la FC (Flight Controller), qui forment le cœur du système.</p>
+             <img src="20251224_192504_mdf.jpg" alt="Assemblage en cours" class="project-img">
+             <img src="20251226_173121_mdf.jpg" alt="Assemblage en cours" class="project-img">
+             <p>Une fois les moteurs, le condensateur de filtrage et le câble d'alimentation soudés, un premier test électrique s'impose. L'utilisation d'un "smoke-stopper" (limiteur de courant) est indispensable pour détecter un éventuel court-circuit avant la mise sous tension définitive. C'est une étape délicate : un court-circuit avéré obligerait à refaire tout le câblage, au risque d'avoir déjà endommagé l'électronique.</p>
+             <img src="smoke-stopper-xt30.jpg" alt="Assemblage en cours" class="project-img">
+        </section>
+
+        <section class="content-section reveal">
+            <h2>Soudure et intégration</h2>
+            <p>Le processus de câblage et de soudure s'est révélé particulièrement chronophage. La miniaturisation des composants implique de travailler sur des "pads" de contact minuscules. Ne disposant pas d'un fer à souder de forte puissance ni d'une panne parfaitement adaptée à la microélectronique, cette étape a exigé beaucoup de précision et de patience. Mais, étape par étape, la machine a pris forme.</p>
+            
+            <img src="Capture d'écran 2026-09-19 123233.png" alt="Assemblage en cours" class="project-img">
+            <img src="20251229_122048_mdf.jpg" alt="Assemblage en cours" class="project-img">
+        </section>
+
+        <section class="content-section reveal">
+            <h2>Configuration logicielle (Betaflight)</h2>
+            <p>L'assemblage physique terminé, le drone n'est pas encore apte au vol. Il est impératif de configurer la machine via le logiciel Betaflight. Cet outil paramètre entièrement le comportement en vol (réactivité, stabilité, filtres PID). Il permet également de configurer l'OSD (l'affichage des données dans le masque), le comportement de sécurité en cas de perte de signal (failsafe) et l'appairage radio. En somme, c'est l'interface qui traduit l'assemblage matériel en un système de vol cohérent et sécurisé.</p>
+            <video class="project-img" autoplay loop muted playsinline>
+             <source src="Video Project 2.mp4" type="video/mp4">
+                 Votre navigateur ne supporte pas la lecture de vidéos.
+            </video>
+        </section>
+
+        <section class="content-section reveal">
+            <h2>Phase d'apprentissage : le simulateur</h2>
+            <p>Le véritable premier vol ne se fait pas sur le terrain, mais sur écran. Avant même d'y brancher une batterie pour tenter des acrobaties, un passage par le simulateur s'impose. La physique du pilotage FPV est contre-intuitive au départ ; sans entraînement, le premier vol se solderait inévitablement par un crash. Après quelques heures d'assimilation des commandes virtuelles, j'étais enfin prêt pour le terrain.</p>
+            <img src="s_4.jpg" alt="Assemblage en cours" class="project-img">
+        </section>
+
+        <section class="content-section reveal">
+            <h2>Vol inaugural et réglages PID</h2>
+            <p>Le vol inaugural reste un moment sous tension, avec l'appréhension constante d'une défaillance inattendue. Heureusement, tout s'est très bien déroulé et les résultats ont été à la hauteur de mes attentes. Ce premier essai m'a ensuite permis d'analyser le comportement de l'aéronef afin d'affiner le correcteur PID de la carte de vol, optimisant ainsi les performances et éliminant les saccades résiduelles.</p>
+            <video class="project-img" autoplay loop muted playsinline>
+             <source src="7202a4d955d4a0a20abf613fcd52839f.mp4" type="video/mp4">
+                 Votre navigateur ne supporte pas la lecture de vidéos.
+            </video>
+        </section>
+
+        <section class="content-section reveal">
+            <h2>Bilan du projet</h2>
+            <p>Ce projet m'a énormément apporté sur le plan technique. J'ai pu consolider mes compétences pratiques (soudure de précision, câblage, lecture de schémas électriques) et ma capacité à diagnostiquer des problèmes inattendus de manière autonome. L'objectif initial est pleinement atteint : concevoir un système complexe et fonctionnel, tout en prouvant qu'avec de la méthode, de la détermination et de l'investissement personnel, les défis de l'ingénierie embarquée sont tout à fait accessibles.</p>
+            <img src="20260104_191544.jpg" alt="Assemblage en cours" class="project-img">
+            <img src="20260215_130530 (1).jpg" alt="Assemblage en cours" class="project-img">
+            <img src="20260321_182932.jpg" alt="Assemblage en cours" class="project-img">
+        </section>
+
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
+            }, { threshold: 0.1 });
+            reveals.forEach(reveal => observer.observe(reveal));
+        });
+    </script>
+</body>
+</html>

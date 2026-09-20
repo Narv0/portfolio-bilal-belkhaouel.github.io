@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIPE 2024/2025 - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #00109F; 
+            --accent-color: #2858DD;  
+            --secondary-color: #4C5F80; 
+            --bg-cream: #f8fafc;      
+            --soft-bg: #f0f4fa;
+            --text-dark: #00109F;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            background-color: var(--bg-cream);
+            font-family: 'Barlow', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.8;
+        }
+
+        h1, h2, h3 { font-family: 'Barlow', sans-serif; color: var(--text-dark); font-weight: 700; }
+        p { font-size: 18px; color: var(--secondary-color); }
+        
+        .navbar {
+            background-color: var(--primary-color);
+            padding: 20px 50px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .back-btn {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: color 0.3s;
+        }
+        .back-btn:hover { color: var(--soft-bg); }
+
+        .article-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .project-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .project-header h1 { font-size: 48px; margin-bottom: 15px; }
+        .project-header p { font-size: 22px; color: var(--accent-color); font-weight: 500; }
+
+        .content-section {
+            background: white;
+            padding: 40px;
+            margin-bottom: 40px;
+            border-left: 6px solid var(--primary-color);
+            border-top: 1px solid var(--soft-bg);
+            border-right: 1px solid var(--soft-bg);
+            border-bottom: 1px solid var(--soft-bg);
+        }
+
+        .content-section h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--soft-bg);
+            padding-bottom: 10px;
+        }
+
+        .project-img {
+            width: 80%;
+            height: auto;
+            margin: 25px auto;
+            background-color: var(--soft-bg);
+            min-height: 200px; 
+            display: block;
+            border: 1px solid var(--secondary-color);
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .pdf-container {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            min-height: 400px;
+            margin-top: 25px;
+            border: 1px solid var(--secondary-color);
+            background-color: var(--soft-bg);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .pdf-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
+
+        
+        @media (max-width: 768px) {
+            .navbar { padding: 15px 20px; text-align: center; }
+            .article-container { padding: 40px 15px; }
+            
+            
+            .project-header h1 { font-size: 32px; }
+            .project-header p { font-size: 18px; }
+            .content-section h2 { font-size: 26px; }
+            
+            
+            .content-section { padding: 25px 15px; }
+            .project-img, .pdf-container { width: 100%; min-height: auto; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="../index.html" class="back-btn">← Retour au portfolio</a>
+    </nav>
+
+    <main class="article-container">
+        
+        <header class="project-header reveal">
+            <h1>Stabilisation des drones par asservissement</h1>
+            <p><strong>Étude théorique</strong>, conception, filtrage de données et asservissement PID, analyse et traitement des données permettant de comprendre et <strong>mettre en œuvre</strong> la stabilisation des drones face aux perturbations.</p>
+        </header>
+
+        <section class="content-section reveal">
+            <h2>Introduction</h2>
+            <p>Ce projet s'inscrit dans le cadre du Travail d'Initiative Personnelle Encadré (TIPE), réalisé en classe préparatoire scientifique. Le thème pour l'année 2024/2025 était <strong>Transformation, Transition et Conversion.</strong> Les systèmes gyroscopiques des drones, essentiels à leur stabilité, s'inscrivent dans cette dynamique en convertissant les variations de mouvements physiques en signaux électriques exploitables. De plus, les drones ont amorcé une véritable transition dans les modes de transport de marchandises, notamment pour la livraison de colis et de médicaments.</p>
+        </section>
+
+        <section class="content-section reveal">
+            <h2>Pourquoi ?</h2>
+            <p>Lors de mon projet de fin de Terminale, dont l'objectif était de concevoir un drone de transport, j'ai été confronté à d'importants problèmes de stabilisation qui ont empêché l'aboutissement du projet. Ne souhaitant pas rester sur un échec, j'ai décidé d'approfondir l'étude de la stabilisation des aéronefs.</p>
+            
+            <img src="Design sans titre.png" alt="Schéma de l'idée initiale" class="project-img">
+            
+        </section>
+
+        <section class="content-section reveal">
+            <h2>Les débuts du projet</h2>
+            <p>Initialement, je souhaitais créer un quadrirotor complet. Cependant, afin de rester concentré sur mon objectif principal — l'étude de la stabilisation — et ne pas m'éparpiller sur la radiocommande, la transmission ou le châssis, j'ai choisi de me limiter à une maquette mono-axe.</p>
+            <br>
+            <p>L'objectif est de stabiliser un axe doté d'un moteur à chaque extrémité : lorsqu'il subit une perturbation, le système doit corriger son inclinaison de manière autonome pour revenir à l'horizontale.</p>
+            
+            <img src="VideoCapture_20260818-220202.jpg" alt="Photo des premières expérimentations" class="project-img">
+            <p>Expérience permettant de comprendre le fonctionnement des gyroscopes via une première mise en œuvre : la luminosité de la LED varie en fonction de l'inclinaison du capteur.</p>
+        </section>
+
+        <section class="content-section reveal">
+            <h2>Les complications rencontrées</h2>
+            <p>Avant d'aborder la théorie et le code, la conception mécanique a posé plusieurs défis. L'axe initial, en métal, s'est avéré trop lourd pour les moteurs disponibles. Je l'ai donc remplacé par une équerre en plastique, beaucoup plus légère. Cependant, cette solution a généré un nouveau problème : d'importantes vibrations rendaient les données inexploitables. Il a donc fallu implémenter des filtres (mécaniques et électroniques), en plus de résoudre divers problèmes liés au matériel, au déséquilibre et à l'alimentation électrique.</p>
+            
+            <img src="20250107_181412 (1).jpg" alt="Problème 1" class="project-img">
+            <img src="angle brut.png" alt="Problème 2" class="project-img">
+        </section>
+
+        <section class="content-section reveal">
+            <h2>Les solutions apportées</h2>
+            <p>Pour atténuer les vibrations, j'ai d'abord rigidifié l'axe en plastique pour réduire sa malléabilité. Ayant remarqué qu'une compression des moteurs diminuait les vibrations, j'ai modélisé et imprimé en 3D des pièces sur mesure permettant à la fois de les maintenir fermement et de servir de supports.</p>
+            <br>
+            <p>Malgré ces améliorations mécaniques, la mise en place d'un filtre numérique s'est avérée indispensable. Bien que j'aie initialement envisagé un filtre de Kalman, j'ai opté pour un filtre passe-bas du premier ordre afin de rester en adéquation avec les attendus du programme de la filière TSI. Les résultats obtenus se sont révélés très concluants.</p>
+            <img src="angle filtre tau 2.png" alt="Problème 3" class="project-img">
+        </section>
+
+        <section class="content-section reveal">
+            <h2>Conclusion</h2>
+            <p>Ce projet m'a permis de confronter l'étude théorique à la réalité pratique. J'ai pu constater que les modèles mathématiques présentent des limites face aux contraintes physiques réelles, exigeant une forte capacité d'adaptation. Si le choix du matériel est déterminant, c'est l'optimisation de la chaîne d'acquisition (filtrage) et de la régulation qui garantit véritablement la stabilité et la fiabilité du système.</p>
+        </section>
+
+        <section class="content-section reveal">
+            <h2>Support de présentation</h2>
+            <p>Consultez le diaporama du projet ci-dessous pour y trouver davantage de détails.</p>
+            
+            <div class="pdf-container">
+                <iframe src="Presentation_BELKHAOUEL_Bilal_11991_Vfinal_2_ (1).pdf" title="Diaporama TIPE">
+                    <p>Votre navigateur ne supporte pas l'affichage des PDF. <a href="Presentation_BELKHAOUEL_Bilal_11991_Vfinal_2_ (1).pdf">Téléchargez le document ici</a>.</p>
+                </iframe>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            reveals.forEach(reveal => observer.observe(reveal));
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIPE 2025/2026 - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #00109F; 
+            --accent-color: #2858DD;  
+            --secondary-color: #4C5F80; 
+            --bg-cream: #f8fafc;      
+            --soft-bg: #f0f4fa;
+            --text-dark: #00109F;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background-color: var(--bg-cream); font-family: 'Barlow', sans-serif; color: var(--text-dark); line-height: 1.8; }
+        h1, h2, h3 { font-family: 'Barlow', sans-serif; color: var(--text-dark); font-weight: 700; }
+        p { font-size: 18px; color: var(--secondary-color); }
+        
+        .navbar { background-color: var(--primary-color); padding: 20px 50px; position: sticky; top: 0; z-index: 100; }
+        .back-btn { color: white; text-decoration: none; font-weight: 600; font-size: 18px; transition: color 0.3s; }
+        .back-btn:hover { color: var(--soft-bg); }
+
+        .article-container { max-width: 900px; margin: 0 auto; padding: 60px 20px; }
+        .project-header { text-align: center; margin-bottom: 60px; }
+        .project-header h1 { font-size: 48px; margin-bottom: 15px; }
+        .project-header p { font-size: 22px; color: var(--accent-color); font-weight: 500; }
+
+        .content-section { background: white; padding: 40px; margin-bottom: 40px; border-left: 6px solid var(--primary-color); border-top: 1px solid var(--soft-bg); border-right: 1px solid var(--soft-bg); border-bottom: 1px solid var(--soft-bg); }
+        .content-section h2 { font-size: 32px; margin-bottom: 20px; border-bottom: 2px solid var(--soft-bg); padding-bottom: 10px; }
+
+        .project-img {
+            width: 80%;
+            height: auto;
+            margin: 25px auto;
+            background-color: var(--soft-bg);
+            min-height: 200px; 
+            display: block;
+            border: 1px solid var(--secondary-color);
+        }
+
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.6s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        .pdf-container {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            min-height: 400px;
+            margin-top: 25px;
+            border: 1px solid var(--secondary-color);
+            background-color: var(--soft-bg);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .pdf-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
+
+        
+        @media (max-width: 768px) {
+            .navbar { padding: 15px 20px; text-align: center; }
+            .article-container { padding: 40px 15px; }
+            
+            
+            .project-header h1 { font-size: 32px; }
+            .project-header p { font-size: 18px; }
+            .content-section h2 { font-size: 26px; }
+            
+            
+            .content-section { padding: 25px 15px; }
+            .project-img, .pdf-container { width: 100%; min-height: auto; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="../index.html" class="back-btn">← Retour au portfolio</a>
+    </nav>
+
+    <main class="article-container">
+        
+        <header class="project-header reveal">
+            <h1>Stabilisation d’une plateforme de Gough-Stewart pour la compensation de la houle</h1>
+            <p><strong>Étude théorique</strong> et modélisation géométrique permettant de comprendre et <strong>mettre en œuvre</strong> la stabilisation d'une plateforme de Gough-Stewart face aux perturbations maritimes.</p>
+        </header>
+
+        <section class="content-section reveal">
+            <h2>Introduction</h2>
+            <p>Ce projet s'inscrit dans le cadre du Travail d'Initiative Personnelle Encadré (TIPE), réalisé en classe préparatoire scientifique. Le thème pour l'année 2025/2026 était <strong>Cycles et Boucles</strong>. En milieu marin, la contrainte cyclique de la houle nuit considérablement aux interventions. Grâce à un asservissement, ce système compense les oscillations subies afin de garantir une stabilité accrue de la plateforme supérieure.</p>
+        </section>
+
+        <section class="content-section reveal">
+            <h2>Idée et inspiration</h2>
+            <p>La sécurité des opérations en mer impose de stabiliser les équipements face à la houle. La plateforme de Stewart permet cette compensation de manière active. C’est cette capacité à maintenir une charge immobile grâce à un asservissement précis qui m'a conduit à l'étude de ce système.</p>
+            
+            <img src="ezgif-79bc708d5e3d60de.gif" alt="Concept de base" class="project-img">
+            
+            <p>En découvrant les systèmes développés par l'entreprise Ampelmann, j'ai été immédiatement fasciné par la structure et l'ingéniosité du fonctionnement de leur plateforme.</p>
+        </section>
+
+        <section class="content-section reveal">
+            <h2>Les débuts du projet</h2>
+            <p>Pour étudier ce système, ma première approche a consisté à modéliser en 3D sur SolidWorks une maquette que j'allais ensuite concevoir physiquement. Cette modélisation me permettait non seulement de vérifier la faisabilité de mon projet, mais également d'étudier la cinématique complexe de la plateforme.</p>
+            
+            <img src="image (4).png" alt="Modélisation 1" class="project-img">
+            <p>Habituellement, dans les applications industrielles de cette architecture, les 6 actionneurs sont des vérins (hydrauliques ou électriques). Cependant, souhaitant réaliser une version miniature, l'utilisation de mini-vérins s'avérait complexe et coûteuse. J'ai alors opté pour une alternative tout aussi efficace : <strong>des servomoteurs</strong>. En concevant un système pseudo bielle-manivelle, il est tout à fait possible d'utiliser ces actionneurs rotatifs en lieu et place des vérins linéaires.</p>
+            <img src="20260601_133733 (1) (1).jpg" alt="Modélisation 2" class="project-img">
+            <img src="image (3).png" alt="Modélisation 3" class="project-img">
+        </section>
+
+        <section class="content-section reveal">
+            <h2>Les difficultés rencontrées</h2>
+            <p>Le plus grand défi de ce projet a été de trouver la relation exacte entre la commande angulaire envoyée aux servomoteurs et l'inclinaison réelle de la plateforme (en roulis ou en tangage). L'objectif final était d'appliquer un principe de superposition pour stabiliser les deux axes simultanément. Toutefois, la tâche s'est avérée particulièrement complexe.</p>
+            <p>Une première approche purement mathématique a été envisagée. Néanmoins, au vu de la quantité de matrices et de la complexité numérique que cela aurait imposé au microcontrôleur, le temps de calcul aurait été trop lent, rendant l'asservissement inefficace en temps réel.</p>
+            
+            <img src="Capture d'écran 2026-09-17 201415.png" alt="Illustration des erreurs" class="project-img">
+        </section>
+
+        <section class="content-section reveal">
+            <h2>Les solutions apportées</h2>
+            <p>Pour établir un lien entre la position des servomoteurs (qui reçoivent tous la même consigne angulaire) et l'inclinaison de la plateforme, j'ai commencé par effectuer une série de mesures physiques directement sur le prototype. À partir de ces données empiriques, j'ai tracé un nuage de points afin d'analyser le comportement du système.</p>
+            <br>
+            <img src="mgd.png" alt="Illustration" class="project-img">
+            <br>
+            <p>Dans un premier temps, j'ai testé une régression linéaire simple en espérant obtenir une relation de proportionnalité directe. Je me suis vite aperçu que ce modèle manquait de précision et ne reflétait pas fidèlement la cinématique du mécanisme : j'obtenais un décalage (offset) beaucoup trop important lors de l'inversion du modèle. Pour y remédier, je suis passé à un modèle quadratique, plus précisément une régression polynomiale du second degré. Cette nouvelle courbe modélisait bien mieux la réalité (avec un coefficient R² beaucoup plus élevé).</p>
+            <br>
+            <img src="regression.png" alt="Illustration" class="project-img">
+            <br>
+            <p>Le véritable défi résidait dans l'exploitation de ces données. Pour stabiliser le système, le microcontrôleur doit raisonner à l'inverse : il doit calculer la position à transmettre au servomoteur en fonction de l'angle d'inclinaison cible. J'ai donc repris mon équation du second degré pour l'inverser mathématiquement à la main, en utilisant la forme canonique comme étape de calcul intermédiaire.</p>
+            <br>
+            <img src="regression_MGI.png" alt="Illustration" class="project-img">
+            <br>
+            <p>Ce développement m'a permis d'isoler une formule directe incluant une racine carrée. L'avantage majeur de cette solution est qu'elle fournit à la carte de commande une équation analytique claire, calculable instantanément à chaque itération de la boucle de contrôle, garantissant ainsi la réactivité du programme.</p>
+        </section>
+
+        <section class="content-section reveal">
+            <h2>Conclusion</h2>
+            <p>Finalement, j'ai réussi à implémenter les différentes variables, équations et fonctions nécessaires pour asservir correctement la plateforme sur un premier axe (le roulis). En appliquant un principe de superposition, le système parvient à stabiliser simultanément le roulis et le tangage. L'analyse des résultats est également très instructive : lorsqu'on observe l'écart entre l'inclinaison de la base (plateforme inférieure) et celle du plateau (plateforme supérieure), on constate que les mouvements de la base perturbent très peu la stabilité de la consigne supérieure.</p>
+            <br>
+            <img src="differencedecourbe.png" alt="Illustration" class="project-img">
+            <img src="differencedecourbe2.png" alt="Illustration" class="project-img">
+            <br>
+            <p>À certains moments, des pics (premier graphique en orange) sont observables sur les graphiques. Ceux-ci correspondent à des saturations mécanique que j'ai volontairement imposées afin de protéger la maquette contre des contraintes mécaniques trop violentes.</p>
+        </section>
+
+        <section class="content-section reveal">
+            <h2>Support de présentation</h2>
+            <p>Consultez le diaporama du projet ci-dessous.</p>
+            
+            <div class="pdf-container">
+                <iframe src="TIPE Gough-Stewart 2026_DERNIER_VERSION_OFFICIEL.pdf" title="Diaporama TIPE">
+                    <p>Votre navigateur ne supporte pas l'affichage des PDF. <a href="TIPE Gough-Stewart 2026_DERNIER_VERSION_OFFICIEL.pdf">Téléchargez le document ici</a>.</p>
+                </iframe>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
+            }, { threshold: 0.1 });
+            reveals.forEach(reveal => observer.observe(reveal));
+        });
+    </script>
+</body>
+</html>
