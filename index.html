@@ -149,6 +149,10 @@
             transition: margin-left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
+        .mobile-cv-message {
+            display: none;
+        }
+
         @media (min-width: 1024px) {
             .sidebar.open ~ .main-content {
                 margin-left: var(--sidebar-width);
@@ -271,7 +275,8 @@
             .contact-links { flex-direction: column; gap: 15px; }
             .hero-visual { height: auto; }
 
-            .cv-container { height: 450px; }
+            .cv-container { display: none; }
+            .mobile-cv-message { display: block; margin: 30px 0 20px 0; font-size: 18px; color: var(--secondary-color); }
         }
 
         
@@ -446,13 +451,14 @@
                     </div>
                     
                     <div class="cv-container">
-                        <iframe src="CV Belkhaouel Bilal V8 ECM.pdf" title="CV Bilal Belkhaouel">
-                            <p>Votre navigateur ne supporte pas l'affichage des PDF. 
-                            <a href="CV Belkhaouel Bilal V8 ECM.pdf">Téléchargez le CV ici</a>.</p>
-                        </iframe>
+                        <iframe src="CV Belkhaouel Bilal V9 ECM.pdf" title="CV Bilal Belkhaouel"></iframe>
                     </div>
 
-                    <a href="CV Belkhaouel Bilal V8 ECM.pdf" class="btn-outline">Télécharger mon CV (PDF)</a>
+                    <p class="mobile-cv-message">
+                        Pour découvrir mon parcours en détail, je vous invite à télécharger mon CV.
+                    </p>
+
+                    <a href="CV Belkhaouel Bilal V9 ECM.pdf" class="btn-outline">Télécharger mon CV (PDF)</a>
                 </div>
             </div>
         </section>
